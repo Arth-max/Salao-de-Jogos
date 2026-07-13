@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Sgames.css">
+    <title>Salão de Jogos</title>
+</head>
+<body>
+    <!-- Menu principal -->
+    <div id="container1" class="cell">
+    <h1 id="title"> 👾 Salão de jogos </h1>
+    <p> Aqui você pode jogar os jogos que eu fiz, espero que goste! </p>
+
+        <div class="bb1"> 
+             <button class="b1" onclick="Jadivnhação()"><b>Adivinhe o número</b></button>
+             <button class="b1" onclick="Jppt()"><b>Pedra, Papel e Tesoura</b></button>
+             <button class="b1" onclick="JF()"><b>Forca</b></button>
+             <button class="b1" onclick="JVelha()"><b>Jogo da Velha</b></button>
+        </div>
+    </div>
+
+    <!-- Jogo 1: Adivinhe o número -->
+    <div id="Ad"> 
+        <h2>Jogo: Adivinhe o número</h2>
+        <p class="p1"> Tente acertar o número escolhido no intervalo dentro 
+            de um determinado número de tentativas</p>
+        <p class="p2" id="intervalo"> Intervalo Padrão: 1 a <span>100</span></p>
+        <input type="number" id="Jogada" placeholder="Digite seu palpite" min="1" max="100">
+        <button type="button" onclick="jogarAD()" id="btnJogar"><b>Jogar</b></button>
+        <p class="p3" id="msgDV"></p> 
+        <p class="p2" id="Ntent">Tentativas: <span>0</span></p>
+        <p class="p2" id="maxT">Tentativas máximas: <span>10</span></p>
+
+        <div class="slct">
+        <form action="#">
+        <!-- aumento do jogo: -->
+        <p><b>Aumento do Jogo: </b></p>
+        <select id="ex" name="altIntervalo" onchange="aumento()">
+            <option value="100">Sem aumento</option>
+            <option value="250">Aumentar x2.5</option>
+            <option value="500">Aumentar x5</option>
+            <option value="800">Aumentar x8</option>
+            <option value="1000">Aumentar x10</option>
+            <option value="x">Aumento opcional</option>
+        </select>
+        </form>
+        <form action="#">
+        <!-- dificuldade do jogo: -->
+        <p><b>Dificuldade: </b></p>
+        <select id="Dif" name="dificuldade" onchange="dif()">
+            <option value="10">Sem aumento</option>
+            <option value="15">Fácil: 15</option>
+            <option value="8">Médio: 8</option>
+            <option value="5">Difícil: 5</option>
+        </select>
+        </form>
+        </div>
+
+        <button type="button" onclick="reiniciarAD()"><b>Reiniciar jogo</b></button>
+        <button type="button" onclick="back()"><b>Voltar</b></button>
+    </div>
+
+    <!-- Jogo 2: Pedra, Papel e Tesoura -->
+    <div id="ppt">
+        <h2>Jogo: Pedra, Papel e Tesoura</h2>
+        <p class="p1"> Jogue Pedra, Papel ou Tesoura com o computador</p>
+        <input type="text" id="JogadaPPT" placeholder="Digite Pedra, Papel ou Tesoura">
+        <div class="bb1">
+        <button class="rock" onclick="add('pedra')"> <img src="rochas.png" alt="Pedra"> </button>
+        <button class="paper" onclick="add('papel')"> <img src="folha-de-papel.png" alt="Papel"> </button>
+        <button class="scissors" onclick="add('tesoura')"> <img src="tesouras.png" alt="Tesoura"> </button>
+        </div>
+        <p class="p1" id="mScore"> Pontuação máxima do jogo: <span>5</span></p>
+        <p class="p3" id="scorePPT">Placar: Jogador <span>0</span> | <span>0</span> Computador</p> 
+        <p class="p1" id="resultPPT"></p>
+        <button type="button" onclick="Ppt()" id="btnPPT"><b> Jogar </b></button>
+
+        <!-- pontuação máxima -->
+        <form action="#">
+        <select id="maxS" name="maxScore" onchange="maxScorePPT()">
+            <option value="5">Placar padrão: 5</option>
+            <option value="3">Placar rápido: 3</option>
+            <option value="10">Placar longo: 10</option>
+            <option value="15">Placar épico: 15</option>
+        </select>
+        </form>
+
+        <button type="button" onclick="reiniciarPPT()"><b>Reiniciar jogo</b></button>
+        <button type="button" onclick="backPPT()"><b>Voltar</b></button>
+    </div>
+
+    <!-- Jogo 3: Forca -->
+    <div id="Forca-Jogo">
+        <h2> Jogo: Forca</h2>
+        <p> Jogue forca com o computador ou com um amigo</p>
+        <h2> Escolha o modo de Jogo </h2>
+        <button onclick="JogarComp()"><b>Jogar com o computador</b></button>
+        <button onclick="JogarAmigo()"> <b>Jogar com um amigo</b></button>
+        <button onclick="Back4()"><b>Voltar</b></button>
+    </div>
+
+    <!-- Escolha de tema -->
+    <div id="tema-box">
+        <p> Escolha o tema para iniciar: </p>
+        <form action="#">
+            <select class="selectForca" id="tema" name="theme">
+                <option value="Países">Países</option>
+                <option value="Frutas">Frutas</option>
+                <option value="Animais">Animais</option>
+                <option value="Profissão">Profissão</option>
+            </select>
+        </form>
+        <button onclick="JogarJF()"><b>Jogar</b></button>
+        <button onclick="Back3()"><b>Voltar</b></button>
+    </div>
+
+     <div id="tema-boxFriend">
+        <p> Escolha o tema para iniciar: </p>
+        <form action="#">
+            <select class="selectForca" id="tema2" name="theme">
+                <option value="Países">Países</option>
+                <option value="Frutas">Frutas</option>
+                <option value="Animais">Animais</option>
+                <option value="Profissão">Profissão</option>
+            </select>
+        </form>
+        <input class="inputForca" type="password" id="palavra" placeholder="Digite a palavra para seu amigo adivinhar">
+        <button onclick="JogarJF()"><b>Jogar</b></button>
+        <button onclick="Back3()"><b>Voltar</b></button>
+    </div>
+
+    <!-- Com Computador -->
+    <div id="forca">
+        <h2><b>Jogo: Forca</b></h2>
+        <p> Forca com o computador </p>
+        <p> Tema: <span id="temaForca" class="p6"></span></p>
+        <div id="comp">
+          <div class="Forca-area">
+            <div class="corda"></div>
+            <div class="bar-vertical"></div>
+            <div class="bar-horizontal"></div>
+
+            <div class="Boneco">
+              <div class="cabeca"></div>
+              <div class="tronco"></div>
+              <div class="braco-direito"></div>
+              <div class="braco-esquerdo"></div>
+              <div class="perna-direita"></div>
+              <div class="perna-esquerda"></div>
+            </div>
+            </div>
+          <input type="text" id="JogadaForcaComp" placeholder="Digite sua tentativa"> 
+          <p class="p4" id="wordComp"> </p>
+          <p class="p1" id="score2"> Suas vidas: <span class="p5"> 6 </span></p>
+          <p class="p2" id="result2"> </p>
+
+          <div class="bb1">
+          <button type="button" id="btnForcaComp" onclick="JogarForcaComp()"><b>Jogar</b></button>
+          <button type="button" id="TentAd" onclick="TentAdComp()"><b>Tentar Adivinhar</b></button>
+          <button type="button" onclick="reiniciarForcaComp()"><b>Reiniciar jogo</b></button>
+          <button type="button" onclick="BackJF()"><b>Voltar</b></button>
+        </div>
+        </div>
+    </div>
+
+    <!-- Com amigo -->
+    <div id="forca2">
+        <div id="Friend">
+          <h2> Jogo: Forca</h2>
+          <p class="p2"> Forca com um amigo </p>
+          <p class="p3"> Tema: <span class="p6" id="temaForca2"></span></p>
+          <div class="Forca-area">
+            <div class="corda"></div>
+            <div class="bar-vertical"></div>
+            <div class="bar-horizontal"></div>
+
+            <div class="Boneco">
+              <div class="cabeca"></div>
+              <div class="tronco"></div>
+              <div class="braco-direito"></div>
+              <div class="braco-esquerdo"></div>
+              <div class="perna-direita"></div>
+              <div class="perna-esquerda"></div>
+            </div>
+            </div>
+          <input type="text" id="JogadaForcaFriend" placeholder="Digite sua tentativa"> 
+          <p class="p4" id="word"> </p>
+          <p class="p1" id="score"> Suas vidas: <span class="p5"> 6 </span></p>
+          <p class="p2" id="result"> </p>
+          <div class="bb1">
+          <button type="button" id="btnForcaFriend" onclick="JogarForcaFriend()"><b>Jogar</b></button>
+          <button type="button" id="TentAd" onclick="TentAdFriend()"><b>Tentar Adivinhar</b></button>
+          <button type="button" onclick="reiniciarForcaFriend()"><b>Reiniciar jogo</b></button>
+          <button type="button" onclick="BackJF2()"><b>Voltar</b></button>
+          </div>
+        </div>
+    </div>
+
+    <!-- Jogo 4: Jogo da Velha -->
+    <!-- Identificação dos players -->
+    <div id="Velha-Jogo">
+        <h2><b>Jogo: Jogo da Velha</b></h2>
+        <p> PLAYERS: </p>
+        <p> Player 1: <input type="text" id="Jogador1" placeholder="Nome do Jogador 1"></p>
+        <p> Player 2: <input type="text" id="Jogador2" placeholder="Nome do Jogador 2"></p>
+        <button type="button" onclick="JogarVelha()"><b>Jogar</b></button>
+        <button type="button" onclick="BackVV()"><b>Voltar</b></button>
+    </div>
+
+    <!-- Tabuleiro de Jogo -->
+    <div id="JDVelha">
+        <h2><b>Jogo: Jogo da Velha</b></h2>
+        <h3><b>Entre dois jogadores</b></h3>
+        <p class="p3" id="placarJV">
+            <span id="nameP1"></span>
+            <span id="symbol1"></span>
+
+            <span id="placar1">0</span> 
+            | 
+            <span id="placar2">0</span>
+            
+            <span id="nameP2"></span>
+            <span id="symbol2"></span>
+        </p>
+
+        <p class="p2" id="turno"> Turno: Jogador X </p>
+        <div class="tabuleiroVelha">
+            <div class="barVvelha1"></div>
+            <div class="barVvelha2"></div>
+            <div class="barHvelha1"></div>
+            <div class="barHvelha2"></div>
+
+            <button class="casasV" data-pos="0"></button>
+            <button class="casasV" data-pos="1"></button>
+            <button class="casasV" data-pos="2"></button>
+           
+            <button class="casasV" data-pos="3"></button>
+            <button class="casasV" data-pos="4"></button>
+            <button class="casasV" data-pos="5"></button>
+
+            <button class="casasV" data-pos="6"></button>
+            <button class="casasV" data-pos="7"></button>
+            <button class="casasV" data-pos="8"></button>
+        </div>
+    </br>
+        <p class="p1" id="resultV"> </p>
+        <div class="bb1">
+            <button type="button" onclick="reiniciarpJV()"><b>Reiniciar partida</b></button>
+            <button type="button" onclick="reiniciarJV()"><b>Reiniciar jogo</b></button>
+            <button type="button" onclick="BackJV()"><b>Voltar</b></button>
+        </div>
+    </div>
+</body>
+<script src="Sgames.js"></script>
+</html>

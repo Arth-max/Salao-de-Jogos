@@ -1,0 +1,504 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 
+    'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 97%;
+    height: 400px;
+    margin: 20px auto;
+    border: solid 2px midnightblue;
+    border-radius: 20px;
+    animation: BorderRotate 5s linear infinite; 
+}
+#Ad {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    min-height: 650px;
+    margin: 40px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    animation: appear 0.8s ease-in-out;
+}
+#ppt {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    min-height: 620px;
+    margin: 40px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    animation: appear 0.8s ease-in-out;
+}
+#forca, #forca2 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    max-width: 95%;
+    height: 730px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transform-origin: center center;
+}
+#JDVelha {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    min-height: 620px;
+    margin: 40px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    animation: appear 0.8s ease-in-out;
+}
+#Ad, #ppt, #forca, #forca2, #tema-box, #tema-boxFriend, #Forca-Jogo, #Velha-Jogo,#JDVelha {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    background: #1C1C1C;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.win {animation: win 1s ease-in-out;}
+.lose {animation: lose 1s ease-in-out;}
+.draw {animation: draw 1s ease-in-out;}
+.win2 {animation: win2 1s ease forwards;}
+.lose2 {animation: lose2 1s ease forwards;}
+.vitoria { animation: pulse 1s ease-in-out;}
+#resultPPT {
+    display: inline-block;
+}
+#wordComp, #word {
+   white-space: pre;
+}
+@keyframes presentation {
+    from { scale: 1; }
+    to { scale: 1.1; }  
+}
+@keyframes BorderRotate {
+    0% { rotate: (0deg); border-color: cornflowerblue; transiton: all 0.5s ease-in-out;}
+    25% { rotate: (90deg); border-color: midnightblue; transiton: all 0.5s ease-in-out;}
+    50% { rotate: (180deg); border-color: darkblue; transiton: all 0.5s ease-in-out;}
+    75% { rotate: (270deg); border-color: midnightblue; transiton: all 0.5s ease-in-out;}
+    100% { rotate: (360deg); border-color: cornflowerblue; transiton: all 0.5s ease-in-out;}
+}
+@keyframes appear {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes win {
+    0% { color: white; transform: scale(1); }
+    50% { color: lightgreen; transform: scale(1.1); }
+    100% { color: limegreen; transform: scale(1); }
+}
+@keyframes pulse {
+    0% { transform: scale(1); background-color: darkgreen; color: white;}
+    50% { transform: scale(1.1); background-color: lightgreen; color: white;} 
+    100% { transform: scale(1); background-color: limegreen; color: white;} 
+}
+@keyframes draw {
+    0% { color: Lightgray; transform: scale(1); }
+    50% { color: Silver; transform: scale(1.1); }
+    100% { color: darkgray; transform: scale(1); }
+}
+@keyframes lose {
+    0% { color: white; transform: scale(1); }
+    50% { color: red; transform: scale(1.1); }
+    100% { color: darkred; transform: scale(1); }
+}
+@keyframes win2 {
+    0% { background-color: lightgreen; transform: scale(1) translateY(0); }
+    50% { background-color: darkgreen; transform: scale(1.15) translateY(0); }
+    100% { background-color: #C0C0C0; transform: scale(1) translateY(20px); }
+}
+@keyframes lose2 {
+    0% { background-color: red; transform: scale(1) translateY(0); }
+    50% { background-color: darkred; transform: scale(1.15) translateY(0); }
+    100% { background-color: #C0C0C0; transform: scale(1) translateY(20px); }
+}
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: bolder;
+    color: steelblue;
+}
+.h1-1 {
+    animation: presentation 1s ease-in-out infinite alternate;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: bolder;
+    color: steelblue;
+}
+h1:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+p {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 5px;
+    color: white;
+}
+.p1 {
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+.p2 {
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    color: cornflowerblue;
+}
+.p3 {
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkgoldenrod;
+}
+.p4 {
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    font-size: 30px;
+}
+.p5 {
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    color: Brown;
+}
+.p6 {
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    color: teal;
+}
+/* Forca */
+#comp, #Friend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#Forca-Jogo {
+    display: none;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    height: 460px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    animation: appear 0.8s ease-in-out;
+}
+.Forca-area {
+    position: relative;
+    width: 220px;
+    height: 260px;
+}
+/* Jogo da Velha */
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(2, 60px);
+    gap: 15px;
+    width: 300px;
+    justify-content: center;
+}
+.tabuleiroVelha {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(2, 60px);
+    gap: 15px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.casasV {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    font-size: 40px;
+    font-weight: bolder;
+    border-radius: 20px;
+    text-align: center;
+}
+.barVvelha1 {
+    width: 10px;
+    background-color: gainsboro;
+    position: absolute;
+    height: 225px;
+    bottom: 20px;
+    margin-left: 100px;
+    top: 235px;
+    border-radius: 10px;
+}
+.barVvelha2 {
+    width: 10px;
+    background-color: gainsboro;
+    position: absolute;
+    height: 225px;
+    bottom: 20px;
+    margin-left: 180px;
+    top: 235px;
+    border-radius: 10px;
+}
+.barHvelha1 {
+    top: 305px;
+    width: 240px;
+    background-color: gainsboro;
+    position: absolute;
+    height: 10px;
+    margin-left: 27px;
+    border-radius: 10px;
+}
+.barHvelha2 {
+    top: 375px;
+    margin-left: 27px;
+    width: 240px;
+    background-color: gainsboro;
+    position: absolute;
+    height: 10px;
+    border-radius: 10px;
+}
+#tema-box, #tema-boxFriend {
+    display: none;
+    gap: 15px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    min-height: 220px;
+    margin: 40px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    animation: appear 0.8s ease-in-out;
+}
+#Velha-Jogo {
+    display: none;
+    gap: 15px;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+    min-height: 220px;
+    margin: 40px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    animation: appear 0.8s ease-in-out;
+}
+.bar-horizontal {
+    width: 100px;
+    height: 10px;
+    top: 10px;
+    left: 40px;
+}
+.bar-vertical {
+    width: 10px;
+    height: 220px;
+    bottom: 20px;
+    left: 40px;
+}
+.corda {
+    width: 4px;
+    height: 40px;
+    top: 20px;
+    left: 136px;
+}
+.bar-horizontal, .bar-vertical, .corda {
+    background-color: gainsboro;
+    position: absolute;
+}
+/* Boneco */
+.Boneco {
+    position: relative;
+    width: 200px;
+    height: 250px;
+}
+.cabeca {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 5px solid gainsboro;
+    position: absolute;
+    top: 55px;
+    left: 116px;
+    background: transparent;
+    opacity: 0;
+}
+.tronco {
+    width: 8px;
+    height: 60px;
+    top: 90px;
+    left: 135px;
+    position: absolute; 
+}
+.braco-direito {
+    width: 8px;
+    height: 40px;
+    top: 95px;
+    left: 150px;
+    transform: rotate(-45deg);
+    position: absolute;
+}
+.braco-esquerdo {
+    width: 8px;
+    height: 40px;
+    top: 95px;
+    left: 120px;
+    transform: rotate(45deg);
+    position: absolute;
+}
+.perna-esquerda {
+    top: 140px;
+    left: 120px;
+    width: 8px;
+    height: 60px;
+    transform: rotate(30deg);
+    position: absolute;
+}
+.perna-direita {
+    top: 140px;
+    left: 150px;
+    width: 8px;
+    height: 60px;
+    transform: rotate(-30deg);
+    position: absolute;
+}
+.tronco, .braco-direito, .braco-esquerdo, .perna-direita, .perna-esquerda {
+    background-color: gainsboro;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+input {
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+    background-color: gainsboro;
+}
+.inputForca {
+    width: 250px;
+}
+input:focus {
+    transform: scale(1.05);
+    outline: none;
+    box-shadow: 0 0 5px cornflowerblue, 0 0 10px cornflowerblue;
+}
+button {
+    background-color: navy;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: white;
+    color: navy;
+    transform: scale(1.05) translateY(-5px);
+    transition: all 0.5s ease-in-out;
+}
+.b1 {
+    background: linear-gradient(to right, darkblue, midnightblue);
+    font-weight: bolder;
+    transition: background 0.5s ease-in-out;
+}
+.b1:hover {
+    background: white;
+    color: navy;
+    transform: scale(1.05) translateY(-5px);
+    transition: all 0.5s ease-in-out;
+}
+.bb1 {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+.slct {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.x {
+    color: crimson;
+}
+.o {
+    color: steelblue;
+}
+.rock {
+    background-color: seagreen;
+    color: white;
+}
+.rock:hover {
+    box-shadow: 0px 0px 10px seagreen;
+}
+.paper {
+    background-color: dodgerblue;
+    color: black;
+}
+.paper:hover {
+    box-shadow: 0px 0px 10px dodgerblue;
+}
+.scissors {
+    background-color: darkred;
+    color: white;
+}
+.scissors:hover {
+    box-shadow: 0px 0px 10px darkred;
+}
+img {
+    width: 30px;
+    height: 30px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+select {
+    width: 150px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, Lightsteelblue, cornflowerblue, midnightblue);
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    font-weight: bolder;
+}
+.selectForca {
+    width: 150px;
+    font-size: 20px;
+    height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, midnightblue, cornflowerblue, Lightsteelblue);
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    font-weight: bolder;
+}
+select option {
+    background-color: cornflowerblue;
+}

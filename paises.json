@@ -1,0 +1,50 @@
+{
+    "africa": [
+    "Angola", "Argelia", "Benin", "Botsuana", "Burkina Faso", "Burundi",
+    "Cabo Verde", "Camaroes", "Chade", "Comores", "Costa do Marfim", "Djibuti",
+    "Egito", "Eritreia", "Essuatini", "Etiopia", "Gabao", "Gambia", "Gana",
+    "Guine", "Guine-Bissau", "Guine Equatorial", "Lesoto", "Liberia", "Libia",
+    "Madagascar", "Malawi", "Mali", "Marrocos", "Ilhas Mauricio", "Mauritania",
+    "Mocambique", "Namibia", "Niger", "Nigeria", "Quenia", "Republica Centro-Africana",
+    "Republica Democratica do Congo", "Republica do Congo", "Ruanda",
+    "Sao Tome e Principe", "Senegal", "Serra Leoa", "Seychelles", "Somalia", "Sudao", 
+    "Sudao do Sul", "Tanzania", "Togo", "Tunisia", "Uganda","Zambia", "Zimbabue"
+    ]
+    
+    , "america": [
+    "Antigua e Barbuda", "Argentina", "Bahamas", "Barbados", "Belize", "Bolivia",
+    "Brasil", "Canada", "Chile", "Colombia", "Costa Rica", "Cuba", "Dominica", 
+    "El Salvador", "Equador", "Estados Unidos", "Granada", "Guatemala", "Guiana",
+    "Haiti", "Honduras", "Jamaica", "Mexico", "Nicaragua", "Panama", "Paraguai",
+    "Peru", "Republica Dominicana", "Santa Lucia", "Sao Cristovao e Neves", 
+    "Sao Vicente e Granadinas", "Suriname", "Trinidad e Tobago", "Uruguai",
+    "Venezuela"
+    ]
+
+    , "asia": [
+    "Afeganistao", "Arabia Saudita", "Armenia", "Azerbaijao", "Bahrein", "Bangladesh",
+    "Butao", "Brunei", "Camboja", "Catar", "Cazaquistao", "China", "Chipre",
+    "Coreia do Norte", "Coreia do Sul", "Emirados Arabes Unidos", "Filipinas", "Georgia",
+    "Hong Kong", "Iemen", "India", "Indonesia", "Iran", "Iraque", "Israel", "Japao", "Jordania", 
+    "Kuwait", "Laos", "Libano", "Macau", "Malasia", "Maldivas", "Mongolia", "Myanmar", "Nepal",
+    "Oma", "Paquistao", "Quirguistao", "Singapura", "Sri Lanka", "Siria", "Tailandia",
+    "Tajiquistao", "Timor-Leste", "Turcomenistao", "Turquia", "Taiwan", "Uzbequistao", "Vietna"
+    ]
+
+    , "europa": [
+    "Albania", "Alemanha", "Andorra", "Austria", "Belgica", "Bielorrussia",
+    "Bosnia e Herzegovina", "Bulgaria", "Croacia", "Dinamarca", "Eslovaquia",
+    "Eslovenia", "Espanha", "Escocia", "Estonia", "Finlandia", "Franca", "Grecia", 
+    "Hungria", "Irlanda", "Irlanda do Norte", "Inglaterra", "Islandia", "Italia", 
+    "Kosovo", "Letonia", "Liechtenstein", "Lituania", "Luxemburgo", "Macedonia do Norte", 
+    "Malta", "Moldavia", "Monaco", "Montenegro", "Noruega", "Holanda", "Pais de Gales",
+    "Polonia", "Portugal", "Republica Tcheca", "Romenia", "Russia", "San Marino",
+    "Servia", "Suecia", "Suica", "Ucrania", "Vaticano"
+    ]
+
+    , "oceania": [
+    "Australia", "Fiji", "Ilhas Marshall", "Ilhas Salomao",
+    "Kiribati", "Micronesia", "Nauru", "Nova Zelandia", "Palau",
+    "Papua-Nova Guine", "Samoa", "Tonga", "Tuvalu", "Vanuatu"
+    ]
+}
