@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 97%;
-    height: 400px;
+    min-height: 400px;
     margin: 20px auto;
     border: solid 2px midnightblue;
     border-radius: 20px;
@@ -45,7 +45,7 @@ body {
     align-items: center;
     width: 55%;
     max-width: 95%;
-    height: 730px;
+    min-height: 730px;
     margin: 20px auto;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
