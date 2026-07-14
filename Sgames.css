@@ -139,7 +139,7 @@ h1 {
 h2 {
     text-align: center;
     margin-top: 30px;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bolder;
     color: steelblue;
 }
@@ -149,7 +149,7 @@ h1:hover {
 }
 p {
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 5px;
     color: white;
 }
@@ -197,7 +197,7 @@ p {
     flex-direction: column;
     align-items: center;
     width: 45%;
-    height: 460px;
+    min-height: 460px;
     margin: 20px auto;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
@@ -211,10 +211,10 @@ p {
 /* Jogo da Velha */
 .tabuleiro {
     display: grid;
-    grid-template-columns: repeat(3, 60px);
     grid-template-rows: repeat(2, 60px);
     gap: 15px;
-    width: 300px;
+    width: 200%;
+    max-width: 260px;
     justify-content: center;
 }
 .tabuleiroVelha {
@@ -385,7 +385,8 @@ p {
 }
 
 input {
-    width: 200px;
+    width: 80%;
+    max-width: 200px;
     padding: 10px;
     border-radius: 10px;
     border: none;
@@ -393,7 +394,7 @@ input {
     background-color: gainsboro;
 }
 .inputForca {
-    width: 250px;
+    width: 90%;
 }
 input:focus {
     transform: scale(1.05);
@@ -432,11 +433,13 @@ button:hover {
 .bb1 {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 8px;
 }
 .slct {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 .x {
@@ -476,7 +479,8 @@ form {
     align-items: center;
 }
 select {
-    width: 150px;
+    width: 100%;
+    max-width: 250px;
     border-radius: 10px;
     background: linear-gradient(135deg, Lightsteelblue, cornflowerblue, midnightblue);
     padding: 5px;
@@ -501,4 +505,34 @@ select {
 }
 select option {
     background-color: cornflowerblue;
+}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 12px;
+    }
+    #Ad, #ppt, #JDVelha {
+        width: 80%;
+        min-height: 640px;
+    }
+    #Forca-Jogo {
+        width: 80%;
+    }
+    #forca, #forca2, #Velha-Jogo {
+        width: 90%;
+    }
+    #tema-box, #tema-boxFriend {
+        width: 80%;
+    }
+    .Forca-area {
+        transform: scale(0.75);
+    }
+    .tabuleiro, .tabuleiroVelha {
+        transform: scale(0.8);
+    }
 }
