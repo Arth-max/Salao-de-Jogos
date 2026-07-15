@@ -22,7 +22,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 55%;
-    min-height: 650px;
+    min-height: 600px;
     margin: 40px auto;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
@@ -32,8 +32,8 @@ body {
     display: none;
     flex-direction: column;
     align-items: center;
-    width: 45%;
-    min-height: 620px;
+    width: 40%;
+    min-height: 580px;
     margin: 40px auto;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
@@ -197,7 +197,7 @@ p {
     flex-direction: column;
     align-items: center;
     width: 45%;
-    min-height: 460px;
+    min-height: 470px;
     margin: 20px auto;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
@@ -506,6 +506,7 @@ select {
 select option {
     background-color: cornflowerblue;
 }
+/* para telas mobile */
 @media (max-width: 480px) {
     h1 {
         font-size: 20px;
@@ -518,12 +519,12 @@ select option {
     }
     #Ad, #ppt, #JDVelha {
         width: 80%;
-        min-height: 640px;
+        min-height: 550px;
     }
     #Forca-Jogo {
         width: 80%;
     }
-    #forca, #forca2, #Velha-Jogo {
+    #forca, #forca2 {
         width: 90%;
     }
     #tema-box, #tema-boxFriend {
@@ -531,6 +532,21 @@ select option {
     }
     .Forca-area {
         transform: scale(0.75);
+    }
+    #Velha-Jogo {
+        width: 80%;
+    }
+    .barVvelha1 {
+        top: 5px;
+    }
+    .barVvelha2 {
+        top: 5px;
+    }
+    .barHvelha1 {
+        top: 75px;
+    }
+    .barHvelha2 {
+        top: 145px;
     }
     .tabuleiro, .tabuleiroVelha {
         transform: scale(0.8);
