@@ -807,8 +807,8 @@ function reiniciarpJV() {
     board = ["", "", "", "", "", "", "", "", ""];
     p1 = p1 === "O" ? "X" : "O";
     p2 = p2 === "X" ? "O" : "X";
-    
-    player = p1;
+   
+    player = player === p2 ? p2 : p1; 
     p.textContent = "Turno: Jogador " + player;
     document.getElementById("symbol1").textContent = "(" + p1 + ")";
     document.getElementById("symbol2").textContent = "(" + p2 + ")";
