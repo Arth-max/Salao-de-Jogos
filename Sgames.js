@@ -21,32 +21,10 @@ butoes.forEach(botao => {
     });
 });
 
-//BOTÕES DE TRANSIÇÃO ENTRE SITES
-//Principal para Adivinhação
-function Jadivnhação() {
-    document.getElementById("container1").style.display = "none";
-    document.getElementById("Ad").style.display = "flex";
-    
-}
-//Adivinhação para Principal
-function back() {
-    document.getElementById("container1").style.display = "flex";
-    document.getElementById("Ad").style.display = "none";
-}
-//Principal para PPT
-function Jppt() {
-    document.getElementById("container1").style.display = "none";
-    document.getElementById("ppt").style.display = "flex";
-}
-//PPT para Principal
-function backPPT() {
-    document.getElementById("container1").style.display = "flex";
-    document.getElementById("ppt").style.display = "none";
-}
-//Principal para modoForca
-function JF() {
-    document.getElementById("container1").style.display = "none";
-    document.getElementById("Forca-Jogo").style.display = "flex";
+//TRANSIÇÃO ENTRE TELAS 
+function trocarTela(show, hide) {
+    document.getElementById(show).style.display = "flex";
+    document.getElementById(hide).style.display = "none";
 }
 
 let modoForca = "";
@@ -64,16 +42,6 @@ function JogarAmigo() {
     document.getElementById("Forca-Jogo").style.display = "none";
     document.getElementById("tema-boxFriend").style.display = "flex";
 }
-//ForcaComp para Principal
-function BackJF() {
-    document.getElementById("container1").style.display = "flex";
-    document.getElementById("forca").style.display = "none";
-}
-//ForcaFriend para principal
-function BackJF2() {
-    document.getElementById("container1").style.display = "flex";
-    document.getElementById("forca2").style.display = "none";
-}
 //tela de temas para modoForca
 function Back3() {
     if (modoForca === "computador") {
@@ -83,16 +51,6 @@ function Back3() {
         document.getElementById("tema-boxFriend").style.display = "none";
         document.getElementById("Forca-Jogo").style.display = "flex";
     }
-}
-//modoForca para Principal
-function Back4() {
-    document.getElementById("Forca-Jogo").style.display = "none";
-    document.getElementById("container1").style.display = "flex";
-}
-//Pricipal para Jogo da Velha
-function JVelha() {
-    document.getElementById("container1").style.display = "none";
-    document.getElementById("Velha-Jogo").style.display = "flex";
 }
 //Principal para nomeação dos players jogo da velha
 function JogarVelha() {
@@ -112,16 +70,6 @@ function JogarVelha() {
 
     document.getElementById("Velha-Jogo").style.display = "none";
     document.getElementById("JDVelha").style.display = "flex";
-}
-//nomeação para principal
-function BackVV() {
-    document.getElementById("container1").style.display = "flex";
-    document.getElementById("Velha-Jogo").style.display = "none";
-}
-//Jogo da Velha para principal
-function BackJV() {
-    document.getElementById("container1").style.display = "flex";
-    document.getElementById("JDVelha").style.display = "none";
 }
 
 //ENTER para jogar
@@ -213,7 +161,7 @@ function aumento() {
     }
     document.getElementById("Jogada").max = max;
     document.getElementById("intervalo").textContent = "Intervalo: 1 a " + max;
-    reiniciar();
+    reiniciarAD();
     console.log(max);
     console.log(v);
 }
@@ -223,7 +171,7 @@ function dif() {
     let dif = document.getElementById("Dif").value;
     tentMax = parseInt(dif);
     document.getElementById("maxT").getElementsByTagName("span")[0].innerText = tentMax;
-    reiniciar();
+    reiniciarAD();
 }
 
 //reinício do jogo
