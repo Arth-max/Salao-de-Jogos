@@ -21,6 +21,24 @@ butoes.forEach(botao => {
     });
 });
 
+//ENTER para jogar
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        if (document.getElementById("Ad").style.display === "flex") {
+            jogarAD();
+        }
+        if (document.getElementById("ppt").style.display === "flex") {
+            Ppt();
+        }
+        if (document.getElementById("forca").style.display === "flex") {
+            JogarForcaComp();
+        }
+         if (document.getElementById("forca2").style.display === "flex") {
+            JogarForcaFriend();
+        }
+    }
+});
+
 //TRANSIÇÃO ENTRE TELAS 
 function trocarTela(show, hide) {
     document.getElementById(show).style.display = "flex";
@@ -52,7 +70,7 @@ function Back3() {
         document.getElementById("Forca-Jogo").style.display = "flex";
     }
 }
-//Principal para nomeação dos players jogo da velha
+//Nomeação dos players jogo da velha
 function JogarVelha() {
     name1 = document.getElementById("Jogador1").value.trim();
     name2 = document.getElementById("Jogador2").value.trim();
@@ -71,24 +89,6 @@ function JogarVelha() {
     document.getElementById("Velha-Jogo").style.display = "none";
     document.getElementById("JDVelha").style.display = "flex";
 }
-
-//ENTER para jogar
-document.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        if (document.getElementById("Ad").style.display === "flex") {
-            jogarAD();
-        }
-        if (document.getElementById("ppt").style.display === "flex") {
-            Ppt();
-        }
-        if (document.getElementById("forca").style.display === "flex") {
-            JogarForcaComp();
-        }
-         if (document.getElementById("forca2").style.display === "flex") {
-            JogarForcaFriend();
-        }
-    }
-});
 
 //ADIVINHE O NÚMERO
 // Variáveis globais para o jogo
