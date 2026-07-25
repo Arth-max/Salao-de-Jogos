@@ -675,7 +675,7 @@ document.querySelectorAll(".casasV").forEach(casa =>
 
 //função para jogar Jogo da Velha
 function goJV(position, button) {
-
+    const colors = {X: "Indigo", O: "darkgreen"}
     if (board[position] !== "" || winner) {
         return;
     }
@@ -684,18 +684,14 @@ function goJV(position, button) {
     button.textContent = player; 
     jog++;
 
-    if (player === "X") {
-        button.style.color = "Indigo";
-    } else {
-        button.style.color = "darkgreen";
-    }
+    button.style.color = colors[player];
     checkWin();
 
     if (!winner) {
         player = player === "X" ? "O" : "X";
         p.textContent = "Turno: Jogador " + player;
     } 
-    
+    p.style.color = colors[player];
 }
 
 //Verificação de Vitória
