@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Sgames.css">
-    <link rel="icon" type="image/png" href="jogo-arcade.png">
+    <link rel="icon" type="image/png" href="imgs/jogo-arcade.png">
     <title>Salão de Jogos</title>
 </head>
 <body>
@@ -13,10 +13,10 @@
     <h1 id="title"> 👾 Salão de jogos </h1>
     <p> Aqui você pode jogar os jogos que eu fiz, espero que goste! </p>
         <div class="bb1"> 
-             <button class="b1" onclick="trocarTela('Ad', 'container1')"><b>Adivinhe o número</b></button>
-             <button class="b1" onclick="trocarTela('ppt', 'container1')"><b>Pedra, Papel e Tesoura</b></button>
-             <button class="b1" onclick="trocarTela('Forca-Jogo', 'container1')"><b>Forca</b></button>
-             <button class="b1" onclick="trocarTela('Velha-Jogo', 'container1')"><b>Jogo da Velha</b></button>
+            <button class="b1" onclick="trocarTela('Ad', 'container1')"><b>Adivinhe o número</b></button>
+            <button class="b1" onclick="trocarTela('ppt', 'container1')"><b>Pedra, Papel e Tesoura</b></button>
+            <button class="b1" onclick="trocarTela('Forca-Jogo', 'container1')"><b>Forca</b></button>
+            <button class="b1" onclick="trocarTela('Velha-Jogo', 'container1')"><b>Jogo da Velha</b></button>
         </div>
     </div>
 
@@ -33,28 +33,28 @@
         <p class="p2" id="maxT">Tentativas máximas: <span>10</span></p>
 
         <div class="slct">
-        <form action="#">
-        <!-- aumento do jogo: -->
-        <p><b>Aumento do Jogo: </b></p>
-        <select id="ex" name="altIntervalo" onchange="aumento()">
-            <option value="100">Sem aumento</option>
-            <option value="250">Aumentar x2.5</option>
-            <option value="500">Aumentar x5</option>
-            <option value="800">Aumentar x8</option>
-            <option value="1000">Aumentar x10</option>
-            <option value="x">Aumento opcional</option>
-        </select>
-        </form>
-        <form action="#">
-        <!-- dificuldade do jogo: -->
-        <p><b>Dificuldade: </b></p>
-        <select id="Dif" name="dificuldade" onchange="dif()">
-            <option value="10">Sem aumento</option>
-            <option value="15">Fácil: 15</option>
-            <option value="8">Médio: 8</option>
-            <option value="5">Difícil: 5</option>
-        </select>
-        </form>
+            <form action="#">
+            <!-- aumento do jogo: -->
+            <p><b>Aumento do Jogo: </b></p>
+            <select id="ex" name="altIntervalo" onchange="aumento()">
+                <option value="100">Sem aumento</option>
+                <option value="250">Aumentar x2.5</option>
+                <option value="500">Aumentar x5</option>
+                <option value="800">Aumentar x8</option>
+                <option value="1000">Aumentar x10</option>
+                <option value="x">Aumento opcional</option>
+            </select>
+            </form>
+            <form action="#">
+            <!-- dificuldade do jogo: -->
+            <p><b>Dificuldade: </b></p>
+            <select id="Dif" name="dificuldade" onchange="dif()">
+                <option value="10">Sem aumento</option>
+                <option value="15">Fácil: 15</option>
+                <option value="8">Médio: 8</option>
+                <option value="5">Difícil: 5</option>
+            </select>
+            </form>
         </div>
 
         <button type="button" onclick="reiniciarAD()"><b>Reiniciar jogo</b></button>
@@ -67,9 +67,9 @@
         <p class="p1"> Jogue Pedra, Papel ou Tesoura com o computador</p>
         <input type="text" id="JogadaPPT" placeholder="Digite Pedra, Papel ou Tesoura">
         <div class="bb1">
-        <button class="rock" onclick="add('pedra')"> <img src="rochas.png" alt="Pedra"> </button>
-        <button class="paper" onclick="add('papel')"> <img src="folha-de-papel.png" alt="Papel"> </button>
-        <button class="scissors" onclick="add('tesoura')"> <img src="tesouras.png" alt="Tesoura"> </button>
+        <button class="rock" onclick="add('pedra')"> <img src="imgs/rochas.png" alt="Pedra"> </button>
+        <button class="paper" onclick="add('papel')"> <img src="imgs/folha-de-papel.png" alt="Papel"> </button>
+        <button class="scissors" onclick="add('tesoura')"> <img src="imgs/tesouras.png" alt="Tesoura"> </button>
         </div>
         <p class="p1" id="mScore"> Pontuação máxima do jogo: <span>5</span></p>
         <p class="p3" id="scorePPT">Placar: Jogador <span>0</span> | <span>0</span> Computador</p> 
@@ -136,64 +136,64 @@
         <p> Forca com o computador </p>
         <p> Tema: <span id="temaForca" class="p6"></span></p>
         <div id="comp">
-          <div class="Forca-area">
-            <div class="corda"></div>
-            <div class="bar-vertical"></div>
-            <div class="bar-horizontal"></div>
+            <div class="Forca-area">
+                <div class="corda"></div>
+                <div class="bar-vertical"></div>
+                <div class="bar-horizontal"></div>
 
-            <div class="Boneco">
-              <div class="cabeca"></div>
-              <div class="tronco"></div>
-              <div class="braco-direito"></div>
-              <div class="braco-esquerdo"></div>
-              <div class="perna-direita"></div>
-              <div class="perna-esquerda"></div>
+                <div class="Boneco">
+                    <div class="cabeca"></div>
+                    <div class="tronco"></div>
+                    <div class="braco-direito"></div>
+                    <div class="braco-esquerdo"></div>
+                    <div class="perna-direita"></div>
+                    <div class="perna-esquerda"></div>
+                </div>
             </div>
-            </div>
-          <input type="text" id="JogadaForcaComp" placeholder="Digite sua tentativa"> 
-          <p class="p4" id="wordComp"> </p>
-          <p class="p1" id="score2"> Suas vidas: <span class="p5"> 6 </span></p>
-          <p class="p2" id="result2"> </p>
+            <input type="text" id="JogadaForcaComp" placeholder="Digite sua tentativa"> 
+            <p class="p4" id="wordComp"> </p>
+            <p class="p1" id="score2"> Suas vidas: <span class="p5"> 6 </span></p>
+            <p class="p2" id="result2"> </p>
 
-          <div class="bb1">
-          <button type="button" id="btnForcaComp" onclick="JogarForcaComp()"><b>Jogar</b></button>
-          <button type="button" id="TentAd" onclick="TentAdComp()"><b>Tentar Adivinhar</b></button>
-          <button type="button" onclick="reiniciarForcaComp()"><b>Reiniciar jogo</b></button>
-          <button type="button" onclick="trocarTela('container1', 'forca')"><b>Voltar</b></button>
-        </div>
+            <div class="bb1">
+                <button type="button" id="btnForcaComp" onclick="JogarForcaComp()"><b>Jogar</b></button>
+                <button type="button" id="TentAd" onclick="TentAdComp()"><b>Tentar Adivinhar</b></button>
+                <button type="button" onclick="reiniciarForcaComp()"><b>Reiniciar jogo</b></button>
+                <button type="button" onclick="trocarTela('container1', 'forca')"><b>Voltar</b></button>
+            </div>
         </div>
     </div>
 
     <!-- Com amigo -->
     <div id="forca2">
         <div id="Friend">
-          <h2> Jogo: Forca</h2>
-          <p class="p2"> Forca com um amigo </p>
-          <p class="p3"> Tema: <span class="p6" id="temaForca2"></span></p>
-          <div class="Forca-area">
-            <div class="corda"></div>
-            <div class="bar-vertical"></div>
-            <div class="bar-horizontal"></div>
+            <h2> Jogo: Forca</h2>
+            <p class="p2"> Forca com um amigo </p>
+            <p class="p3"> Tema: <span class="p6" id="temaForca2"></span></p>
+            <div class="Forca-area">
+                <div class="corda"></div>
+                <div class="bar-vertical"></div>
+                <div class="bar-horizontal"></div>
 
-            <div class="Boneco">
-              <div class="cabeca"></div>
-              <div class="tronco"></div>
-              <div class="braco-direito"></div>
-              <div class="braco-esquerdo"></div>
-              <div class="perna-direita"></div>
-              <div class="perna-esquerda"></div>
+                <div class="Boneco">
+                <div class="cabeca"></div>
+                <div class="tronco"></div>
+                <div class="braco-direito"></div>
+                <div class="braco-esquerdo"></div>
+                <div class="perna-direita"></div>
+                <div class="perna-esquerda"></div>
+                </div>
+                </div>
+            <input type="text" id="JogadaForcaFriend" placeholder="Digite sua tentativa"> 
+            <p class="p4" id="word"> </p>
+            <p class="p1" id="score"> Suas vidas: <span class="p5"> 6 </span></p>
+            <p class="p2" id="result"> </p>
+            <div class="bb1">
+                <button type="button" id="btnForcaFriend" onclick="JogarForcaFriend()"><b>Jogar</b></button>
+                <button type="button" id="TentAd" onclick="TentAdFriend()"><b>Tentar Adivinhar</b></button>
+                <button type="button" onclick="reiniciarForcaFriend()"><b>Reiniciar jogo</b></button>
+                <button type="button" onclick="trocarTela('container1', 'forca2')"><b>Voltar</b></button>
             </div>
-            </div>
-          <input type="text" id="JogadaForcaFriend" placeholder="Digite sua tentativa"> 
-          <p class="p4" id="word"> </p>
-          <p class="p1" id="score"> Suas vidas: <span class="p5"> 6 </span></p>
-          <p class="p2" id="result"> </p>
-          <div class="bb1">
-          <button type="button" id="btnForcaFriend" onclick="JogarForcaFriend()"><b>Jogar</b></button>
-          <button type="button" id="TentAd" onclick="TentAdFriend()"><b>Tentar Adivinhar</b></button>
-          <button type="button" onclick="reiniciarForcaFriend()"><b>Reiniciar jogo</b></button>
-          <button type="button" onclick="trocarTela('container1', 'forca2')"><b>Voltar</b></button>
-          </div>
         </div>
     </div>
 

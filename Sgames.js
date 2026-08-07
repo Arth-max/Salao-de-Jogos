@@ -209,6 +209,8 @@ function Ppt() {
     
     if (Jplayer === Jcomp) {
         document.getElementById("resultPPT").textContent = "Empate! Ambos escolheram " + Jplayer;
+        drawSound.currentTime = 0;
+        drawSound.play();
     } else if ((Jplayer === "pedra" && Jcomp === "tesoura") ||
                (Jplayer === "papel" && Jcomp === "pedra") ||
                (Jplayer === "tesoura" && Jcomp === "papel")) {
